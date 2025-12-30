@@ -177,9 +177,26 @@ body {
 
 /* Highlights */
 .highlight_title {
-  margin-bottom: 15px;
+  padding-top: 50px;
+  margin-bottom: 35px;
   font-weight: 600;
   font-size: 20px;
+}
+
+.highlight_title_Weekly{
+  padding-top: 50px;
+  margin-bottom: 35px;
+  font-weight: 600;
+  font-size: 20px;
+
+}
+
+.highlight_title_month{
+   padding-top: 50px;
+  margin-bottom: 35px;
+  font-weight: 600;
+  font-size: 20px;
+
 }
 
 .highlights {
@@ -190,10 +207,11 @@ body {
 
 .highlight_card {
   background: #fff;
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 25px;
+  padding: 40px;
   text-align: center;
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  width: 150px;
 }
 
 .highlight_card h4 {
@@ -233,4 +251,8 @@ body {
 .right_panel::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 3px;
+}
+
+.Right_footer{
+  background-color: #141414;
 }

@@ -58,7 +58,7 @@ body {
 }
 
 .weather_icon img {
-  width: 150px;
+  width: 100px;
   margin-bottom: 20px;
 }
 
@@ -68,11 +68,15 @@ body {
 }
 
 .time {
+  font-style: Oswald;
+  font-size: larger;
   color: #141414;
   margin-bottom: 15px;
+  font-weight: 800;
 }
 
 .condition {
+
   text-align: center;
   color: #666;
   font-size: 16px;

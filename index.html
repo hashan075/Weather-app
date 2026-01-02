@@ -11,16 +11,19 @@
     <!-- LEFT PANEL -->
     <div class="left_panel">
       <div class="search_box">
-        <input type="text" placeholder="Search for places...">
+        <input id="txt_city" type="text" placeholder="Search for places...">
         <button><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search"></button>
       </div>
 
       <div class="weather_icon">
-        <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Weather Icon">
+        <label id="icon" for="icon">
+          <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather Icon">
+        </label>
       </div>
 
-      <div class="temperature"><label id="temperature_value" for="temperature_value"></label>12°C</div>
-      <p class="time">Monday, 16:00</p>
+
+      <div class="temperature"><label id="temperature_value" for="temperature_value"></label></div>
+      <p id="time" class="time">Monday, 16:00</p>
 
       <div class="condition">
        <label id="condition" for="Mostly Cloudy"><p>☁️ Mostly Cloudy</p></label> 
@@ -28,7 +31,7 @@
       </div>
 
       <div class="location_card">
-        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=400&q=80" alt="">
+        <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="">
         <label id="location" for="location"><p>New York, NY, USA</p></label>
       </div>
     </div>
@@ -60,7 +63,7 @@
         </div>
         <div class="day_card">
           <p>Tue</p>
-          <img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png" alt="">
+          <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="">
          <label id="Tue" for="Tue"> <p>9° / 7°</p></label>
         </div>
         <div class="day_card">
@@ -189,5 +192,6 @@
           <label id="Monthly_Air_Quality" for="Air Quality"><p class="value">105</p></label>
         </div>
       </div>
+      <script src="asset/js/app.js"></script>
 </body>
 </html>

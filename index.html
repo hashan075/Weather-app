@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-    
+  <div class="dashboard">
+    <!-- LEFT PANEL -->
+    <div class="left_panel">
+      <div class="search_box">
+        <input id="txt_city" type="text" placeholder="Search for places...">
+        <button><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search"></button>
+      </div>
+
+      <div class="weather_icon">
+        <label id="icon" for="icon">
+          <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather Icon">
+        </label>
+      </div>
+
+
+      <div class="temperature"><label id="temperature_value" for="temperature_value"></label></div>
+      <p id="time" class="time">Monday, 16:00</p>
+
+      <div class="condition">
+       <label id="condition" for="Mostly Cloudy"><p>☁️ Mostly Cloudy</p></label> 
+        <label id="condition" for="Rain"><p>🌧️ Rain - 30%</p></label>
+      </div>
+
+      <div class="location_card">
+        <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="">
+        <label id="location" for="location"><p>New York, NY, USA</p></label>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right_panel">
+      <div class="top_nav">
+        <div class="tab">
+          <span class="active">Current Weather</span>
+          
+        </div>
+        <div class="user_section">
+          <button class="unit active">°C</button>
+          <button class="unit">°F</button>
+          <img class="avatar" src="https://i.pravatar.cc/50" alt="user">
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="day_card">
+          <p>Sun</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="">
+          <label id="Sun" for="Sun"><p>15° / -3°</p></label>
+        </div>
+        <div class="day_card">
+          <p>Mon</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="">
+          <label id="Mon" for="Mon"><p>12° / 7°</p></label>
+        </div>
+        <div class="day_card">
+          <p>Tue</p>
+          <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="">
+         <label id="Tue" for="Tue"> <p>9° / 7°</p></label>
+        </div>
+        <div class="day_card">
+          <p>Wed</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png" alt="">
+          <label id="Wed" for="Wed"><p>8° / -1°</p></label>
+        </div>
+        <div class="day_card">
+          <p>Thu</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png" alt="">
+          <label id="Thu" for="Thu"><p>5° / -2°</p></label>
+        </div>
+        <div class="day_card">
+          <p>Fri</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="">
+          <label id="Fri" for="Fri"><p>4° / -4°</p></label>
+        </div>
+        <div class="day_card">
+          <p>Sat</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="">
+          <label id="Sat" for="Sat"><p>3° / -3°</p></label>
+        </div>
+      </div>
+
+      <h3 class="highlight_title">Today's Highlights</h3>
+      <div class="highlights">
+        <div class="highlight_card">
+          <h4>UV Index</h4>
+          <div class="uv_index">
+            <div class="gauge"></div>
+            <label id="uv_index" for="uv_index"><span>5</span></label>
+          </div>
+        </div>
+        <div class="highlight_card">
+          <h4>Wind Status</h4>
+          <label id="Wind Status" for="Wind Status"><p class="value">7.70 <span>km/h</span></p></label>
+          <p>WSW</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Sunrise & Sunset</h4>
+          <label id="Sunrise" for="Sunrise"><p>🌅 6:35 AM</p></label>
+          <label id="Sunset" for="Sunset"><p>🌇 5:42 PM</p></label>
+        </div>
+        <div class="highlight_card">
+          <h4>Humidity</h4>
+          <label id="Humidity" for="Humidity"><p class="value">12%</p></label>
+          <p>Normal 👍🏻</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Visibility</h4>
+          <label id="Visibility" for="Visibility"><p class="value">5.2 km</p></label>
+          <p>Average 😐</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Air Quality</h4>
+          <label id="Air Quality" for="Air Quality"><p class="value">105</p></label>
+        </div>
+      </div>
+      
+      <div <h3 class="highlight_title_Weekly">Weekly Highlights</h3>
+       <div class="highlights">
+        <div class="highlight_card">
+          <h4>UV Index</h4>
+          <div class="uv_index">
+            <div class="gauge"></div>
+            <label id="Weekly_uv_index" for="uv_index"><span>5</span></label>
+          </div>
+        </div>
+        <div class="highlight_card">
+          <h4>Wind Status</h4>
+          <label id="Weekly_Wind Status" for="Wind Status"><p class="value">7.70 <span>km/h</span></p></label>
+          <p>WSW</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Sunrise & Sunset</h4>
+          <label id="Weekly_Sunrise" for="Sunrise"><p>🌅 6:35 AM</p></label>
+          <label id="Weekly_Sunset" for="Sunset"><p>🌇 5:42 PM</p></label>
+        </div>
+        <div class="highlight_card">
+          <h4>Humidity</h4>
+          <label id="Weekly_Humidity" for="Humidity"><p class="value">12%</p></label>
+          <p>Normal 👍🏻</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Visibility</h4>
+          <label id="Weekly_Visibility" for="Visibility"><p class="value">5.2 km</p></label>
+          <p>Average 😐</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Air Quality</h4>
+          <label id="Weekly_Air_Quality" for="Air Quality"><p class="value">105</p></label>
+        </div>
+      </div>
+      
+    <div <h3 class="highlight_title_month">Monthly Highlights</h3>
+      <div class="highlights">
+        <div class="highlight_card">
+          <h4>UV Index</h4>
+          <div class="uv_index">
+            <div class="gauge"></div>
+            <label id="Monthly_uv_index" for="uv_index"><span>5</span></label>
+          </div>
+        </div>
+        <div class="highlight_card">
+          <h4>Wind Status</h4>
+          <label id="Monthly_Wind Status" for="Wind Status"><p class="value">7.70 <span>km/h</span></p></label>
+          <p>WSW</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Sunrise & Sunset</h4>
+          <label id="Monthly_Sunrise" for="Sunrise"><p>🌅 6:35 AM</p></label>
+          <label id="Monthly_Sunset" for="Sunset"><p>🌇 5:42 PM</p></label>
+        </div>
+        <div class="highlight_card">
+          <h4>Humidity</h4>
+          <label id="Monthly_Humidity" for="Humidity"><p class="value">12%</p></label>
+          <p>Normal 👍🏻</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Visibility</h4>
+          <label id="Monthly_Visibility" for="Visibility"><p class="value">5.2 km</p></label>
+          <p>Average 😐</p>
+        </div>
+        <div class="highlight_card">
+          <h4>Air Quality</h4>
+          <label id="Monthly_Air_Quality" for="Air Quality"><p class="value">105</p></label>
+        </div>
+      </div>
+      <script src="asset/js/app.js"></script>
 </body>
 </html>
